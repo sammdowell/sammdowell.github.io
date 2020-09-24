@@ -17,6 +17,10 @@ app.route('/api')
   .post((req, res) => {
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
+<<<<<<< HEAD
+    res.send('<p>hello world</p>');
+=======
+>>>>>>> 9384ca1fde0bc9a9a86c4e38c2be464070cb6762
   });
 
 app.listen(port, () => {
