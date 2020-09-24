@@ -64,7 +64,11 @@ body > * {
   padding: 1%;
 }
 
+<<<<<<< HEAD
+.main, .header, nav, .article, .aside, footer, section {
+=======
 .main, .header, nav, .article, .aside, .footer, section {
+>>>>>>> 9384ca1fde0bc9a9a86c4e38c2be464070cb6762
   background-color: rgba(0,255,0,0.5);
   padding: 1%;
 }
@@ -74,7 +78,11 @@ h1 {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
+header img {
+=======
 .header img {
+>>>>>>> 9384ca1fde0bc9a9a86c4e38c2be464070cb6762
   display: block;
   height: 60px;
   padding-top: 20.15px;
@@ -138,4 +146,8 @@ nav a, nav span {
 
 .footer {
   margin-top: 10px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9384ca1fde0bc9a9a86c4e38c2be464070cb6762
