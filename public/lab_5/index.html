@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Samantha Dowell's Lab 4</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Overlock:wght@900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+
+<body>
+    <div class = "header">
+        <h1>Lab 4 for Samantha Dowell</h1> 
+    </div>
+
+    <form action="/api" method="post">
+      <ul class="flex-outer">
+        <li>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" placeholder="Enter your first name here">
+        </li>
+        <li>
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" placeholder="Enter your last name here">
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email here">
+        </li>
+        <li>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone here">
+        </li>
+        <li>
+          <label for="message">Message</label>
+          <textarea id="message" name= "message" rows="5" cols="33">Enter your message here</textarea>
+        </li>
+        <li>
+    
+        <p class = "checkbox-list-label">
+        Age</p>
+          <ul class="flex-inner">
+            <li>
+                <input type="checkbox" id="age35" name="age355">
+                <label for="age35">18-35</label>
+            </li>
+             <li>
+                <input type="checkbox" id="age50" name="age50">
+                <label for="age50">35-50</label>
+            </li>
+            <li>
+                <input type="checkbox" id="age65" name="age65">
+                <label for="age65">50-65</label>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <button class="button" id="submit" type="submit" name="submit" value="submit">Submit</button>
+            <button onclick="testFunction();" class = "button" id= "activate" type="button" name="activate" value="activate">Activate</button>
+          </li>
+      </ul>
+    </form>
+    <script>
+    function testFunction() {
+        const myHeading = document.querySelector('h1');
+        myHeading.textContent = 'Lab 5 for Samantha Dowell'; 
+
+        document.body.style.backgroundColor = "#DCFFFB";
+
+        document.querySelector('p.checkbox-list-label').innerHTML = "Fruits"
+
+        document.querySelector('ul.flex-outer').style = "margin: 0 auto"
+
+        fetch('/api')
+        .then((response) => response.text())
+        .then((response) => {
+            console.log(response);
+        })
+
+        const elements = document.querySelectorAll('.flex-inner li label')
+        const fruitArray = ['orange', 'kiwi', 'banana']
+        elements.forEach((el, i) => {
+            const text = el.innerText;
+            console.log(text);
+            el.innerText = fruitArray[i];
+        })
+    } 
+    const myFunc = () => {}
+
+    </script>
+</body>
+</html>
